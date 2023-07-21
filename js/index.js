@@ -26,3 +26,23 @@ function submitLoginForm(e){
     };
     return false;
 }
+function allPostsApix(){
+    getJJsp('GET',allPostsApi , null , callbackGetPost)
+}
+function callbackGetPost(){
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+        let objects = JSON.parse(this.responseText);
+        // console.log(objects)
+        if(objects.length > 0){
+            document.getElementById("marquee-post-container").style.display = "block";
+            var text = "";
+            for(var i=0;i<objects.length;i++){
+                console.log(objects[i].content);
+                text += "Latest: " + objects[i].content + " . ";
+            }
+            document.getElementById('marquee-post-text').innerText = text;
+        } else {
+            document.getElementById("marquee-post-container").style.display = "none";
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.main-logo-image{width: 170px;border: 1px solid;border-radius: 4px;cursor: pointer;}
+.post-content-container{height: 40px;}
+.contact-image-header{}
+.contact-image-header .contact-image{width: 30px;border-radius: 4px;}
+.contact-image-header .hd{color: #111;font-size: 15px;font-weight: 600;}
+.contact-image-header .number{font-size: 13px;background-color: rgba(255,255,255,0.1);border-radius: 10px;}
+.enquiry-register-container{}
+/* header contact icon */
+/* enquiry-register-container */
+.enquiry-register-container{color: white;padding: 20px 30px; border-radius: 10px;background-color: rgba(255,255,255,0.1);
+  opacity: 1;
+}
+.gallery-container{color: white;}
+.gallery-container .hd{}
+.classrooms_header_dropdown:hover {border: 1px solid;}
+.classrooms_header_dropdown:hover .classrooms_dropdown_content{display: block;}
+.faculties_header_dropdown:hover {border: 1px solid;}
+.faculties_header_dropdown:hover .faculties_dropdown_content{display: block;}
+.courses_header_dropdown:hover {border: 1px solid;}
+.courses_header_dropdown:hover .courses_dropdown_content{display: block;}
+/* header contact icon */
+.fa-contact-icon .fa-fa-contact-icon{
+    color: white;width: 40px;height: 40px;border-radius: 4px;display: flex;
+    align-items: center;justify-content: center;background: #1886c5;margin-right: 10px;
+}
+/* This is my css */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid #072044;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 35px;
+    border-radius: 4px;
+    
+  }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown-content a:hover {background-color: #ddd;}
+  /* footer */
+  .list_none {list-style: none;margin: 0;padding: 0;}
+  .list_none li{list-style: none;}
+  .contact_info > li > i {
+    font-size: 18px;
+    vertical-align: middle;
+    max-width: 30px;
+    width: 100%;
+    text-align: center;
+    margin-right: 5px;color: white;
+}
+.contact_info li:first-child {
+    margin-top: 0;
+}
+.contact_info > li {
+    margin-top: 15px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.contact_info > li > i {
+    font-size: 18px;
+    vertical-align: middle;
+    max-width: 30px;
+    width: 100%;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.fa, .fas {
+    font-weight: 900;
+}
+.contact_info i + *, .contact_info span + * {
+    font-size: 15px;
+    margin: 0;
+    vertical-align: top;
+}
+.foocontact_infoter_link li a{
+    color: #fff;
+}
+  /* footer end */
+/* why-choose-us-4bxcontainer */
+.why-choose-us-4bxcontainer{}
+.why-choose-us-4bxcontainer .why-choose-us-eachbx{
+    padding: 30px;text-align: center!important;
+    margin-top: 30px;border-radius: 10px;background-color: #fff!important;
+    box-shadow: 0px 4px 20px rgba(101, 101, 101, 0.1);
+}
+.why-choose-us-4bxcontainer .why-choose-us-eachbx .box-icon{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;margin: 0 auto;}
+.why-choose-us-4bxcontainer .why-choose-us-eachbx .box-text{color: black;;}
+.why-choose-us-4bxcontainer .why-choose-us-eachbx h5{text-transform: capitalize;margin-bottom: 0.5rem;
+    font-weight: 500;color: #35598e;font-size: 1.25rem;margin-top: 15px;
+    line-height: 1.2;}
+.why-choose-us-4bxcontainer .why-choose-us-eachbx .box-text p{margin: 0;text-align: justify;}
+/* end why-choose-us-4bxcontainer */
+  
