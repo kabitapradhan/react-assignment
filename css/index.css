@@ -106,5 +106,12 @@
     font-weight: 500;color: #35598e;font-size: 1.25rem;margin-top: 15px;
     line-height: 1.2;}
 .why-choose-us-4bxcontainer .why-choose-us-eachbx .box-text p{margin: 0;text-align: justify;}
+.class-gallery-image{width: 566px;}
 /* end why-choose-us-4bxcontainer */
+/* media query */
+@media only screen and (max-width: 768px) {
+    #first-header-navbar{display: none;}
+    .class-gallery-image{width: 100%}
+}
+/* end media query */
   

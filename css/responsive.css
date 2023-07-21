@@ -30,6 +30,11 @@
 
     .slider_section .detail-box h1 {
         font-size: 3rem;
+        text-align: center;
+    }
+    .slider_section .detail-box p {
+        
+        text-align: justify;
     }
 
     .slider_section .img-box {
@@ -66,7 +71,7 @@
 
 @media (max-width: 768px) {
     .hero_area {
-        padding: 0 25px;
+        /* //padding: 0 25px; */
     }
 
     .slider_section .img-box {
