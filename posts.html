@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" />
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="/css/responsive.css" rel="stylesheet" />
+
+    <script src="/js/api.js"></script>
+    <script>
+        let allPost = null;
+        if (!checkLogedIn()) {
+            document.location.href = "index.html"
+        }
+        getAllPost();
+        function getAllPost() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("GET", getAllPostListApi);
+            xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhttp.send(null);
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    const objects = JSON.parse(this.responseText);
+                    allPost = objects;
+                    console.log(objects);
+                    loadAllPost(objects)
+
+                }
+            };
+        }
+        function loadAllPost(data) {
+            var con = "";
+            var ele = document.getElementById("postTableBody");
+            if (data && data.length > 0) {
+                for(var i=0;i<data.length;i++){
+                    con += "<tr>"
+                        + "<th scope=\"row\">"+(i+1)+"</th>"
+                        + "<td>"+data[i].addedDate+"</td>"
+                        + "<td>"+data[i].imageName+"</td>"
+                        + "<td>"+data[i].title+"</td>"
+                        + "<td>"+data[i].content+"</td>"
+                        + "<td>"
+                            + "<button type=\"button\" onclick=\"editPost("+(data[i].postId)+")\" class=\"btn btn-primary\">Edit</button>"
+                            + "<button type=\"button\" onclick=\"deletePost("+(data[i].postId)+")\" class=\"btn btn-warning\">Delete</button>"
+                        + "</td>"
+                    + "</tr>"
+                }
+                ele.innerHTML = con
+            } else {
+
+            }
+
+        }
+        function deletePost(postId){
+
+        }
+        function editPost(postId){
+            
+            // var ele = document.getElementById("postModal");
+            // ele.style.display = "block";
+            // ++++++++++++++++++++++
+            var obj = { title : '',content : '' , postId : '' };
+            for(var i=0;i<allPost.length;i++){
+                console.log(postId , allPost[i].postId)
+                if(allPost[i].postId == postId){
+                    obj.content = allPost[i].content;
+                    obj.title = allPost[i].title;
+                    obj.postId = allPost[i].postId;
+                    break;
+                }
+            }
+            var ds = designPostUpload(obj.title , obj.content , obj.postId);
+            document.body.innerHTML = document.body.innerHTML + ds
+        }
+
+        function postModification(){
+            
+            var obj = { title : '',content : '' };
+            var postId = document.editPostForm.postId.value;
+            obj.title = document.editPostForm.title.value;
+            obj.content = document.editPostForm.content.value;
+            console.log(obj , postId);
+            // ++++++++++++++++++++++++
+            var url = editPostApi + "" + postId;
+            console.log(url)
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("POST", url);
+            xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhttp.send(JSON.stringify(obj));
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    const objects = JSON.parse(this.responseText);
+                    // console.log(objects);
+                }
+            };
+            return false;
+        }
+        function postFileUpload(){
+           
+        }
+        function addPost(){
+            var ds = designPostAdd();
+            document.body.innerHTML = document.body.innerHTML + ds
+           
+        }
+        function posAddSubmit(){
+            var user = localStorage.getItem("user");
+            console.log(user)
+            var obj = { title : '',content : '' }; 
+            obj.title = document.addPostForm.title.value;
+            obj.content = document.addPostForm.content.value;
+            ////////////////////////
+            var url = addPostApi + "user/" + JSON.parse(user).id;
+            console.log(url)
+            console.log(obj)
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("POST", url);
+            xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            xhttp.send(JSON.stringify(obj));
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    const objects = JSON.parse(this.responseText);
+                    console.log(objects);
+                }
+            };
+            return false;
+        }
+
+    </script>
+</head>
+
+<body>
+    <style>
+        .postImage {
+            width: 85px;
+            border-radius: 5px;
+        }
+    </style>
+    <div id="myNav"></div>
+    <!--  -->
+
+      <!--  -->
+      <!-- <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Upload</span>
+                    </div>
+                    <div class="custom-file">
+                      <input onchange="postFileUpload(e)" type="file" class="custom-file-input" id="inputGroupFile01">
+                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                </div> -->
+    <!--  -->
+    <section class="container" style="margin-top: 30px;">
+        <div id="postTable">
+            <div> 
+                <button type="button" onclick="addPost()" class="btn btn-primary">Add Post</button>
+            </div>
+            <table class="table table-hover table-bordered ">
+                <thead class="text-white bg-info">
+                    <tr>
+                        <th>Sl.no</th>
+                        <th>Date</th>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Content</th>
+                        <th>#</th>
+                    </tr>
+                </thead>
+                <tbody id="postTableBody"></tbody>
+            </table>
+        </div>
+    </section>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="./common/common.js"></script>
+</body>
+
+</html>
