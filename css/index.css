@@ -107,11 +107,13 @@
     line-height: 1.2;}
 .why-choose-us-4bxcontainer .why-choose-us-eachbx .box-text p{margin: 0;text-align: justify;}
 .class-gallery-image{width: 566px;}
+#username-error-span,#password-error-span,#login-whole-error{display: none;color: red;font-size: 11px;}
 /* end why-choose-us-4bxcontainer */
 /* media query */
 @media only screen and (max-width: 768px) {
     #first-header-navbar{display: none;}
     .class-gallery-image{width: 100%}
+    .google-map-container{text-align: center;}
 }
 /* end media query */
   

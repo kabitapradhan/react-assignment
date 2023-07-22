@@ -136,39 +136,23 @@
           <div class="user_option">
             <a onclick="clickToLogin()">
               <i class="fa fa-user" aria-hidden="true"></i>
-              <span>
-                Login
-              </span>
+              <span>Login</span>
             </a>
-            <!-- <a href="">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-            </a>
-            <form class="form-inline ">
-              <button class="btn nav_search-btn" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </form> -->
+           
           </div>
         </div>
         <div style="width: 100%;background: #f39224;" id="marquee-post-container">
           <!-- post content hide -->
           <div class="d-flex align-items-center post-content-container" >
             <marquee id="marquee-post-text" onmouseout="this.start();" onmouseover="this.stop();" direction="left"> 
-              <!-- Latest: CMA inter Module 2 batch starting from January 18th -->
-              
+            
             </marquee>
           </div>
 
         </div>
       </nav>
     </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <!-- Button trigger modal -->
-    <!-- <button type="button" class="btn btn-primary" onclick="clikToLoginModal()">
-  Launch demo modal
-</button> -->
-
+<!-- end header -->
     <!-- Modal -->
     <div style="z-index: 99999999;background: #0000004a;" class="modal" id="userLoginModal">
       <div class="modal-dialog" role="document">
@@ -185,13 +169,15 @@
                 <label for="exampleInputEmail1">Email address</label>
                 <input name="username" type="text" class="form-control" id="exampleInputEmail1"
                   aria-describedby="emailHelp" placeholder="Enter email">
+                  <span id="username-error-span">User name must be need</span>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
                 <input name="password" type="password" class="form-control" id="exampleInputPassword1"
                   placeholder="Password">
+                  <span id="password-error-span">User password must be need</span>
               </div>
-
+              <span id="login-whole-error">Please enter correct username or password</span>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </div>
@@ -216,7 +202,7 @@
                         Welcome To <br>
                         Disha Classes
                       </h1>
-                      <p>
+                      <p class="">
                         Disha was started in the year 2020 with the support and encouragement by retired and serving
 
                         IAS, IPS, IRS and KAS Officers. ICC is passionate about ts success from the very first year of establishment and 
@@ -494,10 +480,13 @@
           </div>
           <div class="col-lg-8 col-sm-6 mb-4 mb-lg-0" style="color: white;">
             <h6 style="font-size: 25px;">Reach Us</h6>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14967.682020331433!2d85.83035473307591!3d20.30355732333931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909f30d449105%3A0xceeabf2060b3b884!2sVani%20Vihar%2C%20Bhubaneswar%2C%20Odisha!5e0!3m2!1sen!2sin!4v1689916156129!5m2!1sen!2sin" 
-              width="100%" height="450" style="border-radius: 4p;" allowfullscreen="" loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            <div class="google-map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14967.682020331433!2d85.83035473307591!3d20.30355732333931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909f30d449105%3A0xceeabf2060b3b884!2sVani%20Vihar%2C%20Bhubaneswar%2C%20Odisha!5e0!3m2!1sen!2sin!4v1689916156129!5m2!1sen!2sin" 
+                width="100%" height="450" style="border-radius: 4p;" allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            
             </div>
           </div>
         </div>
