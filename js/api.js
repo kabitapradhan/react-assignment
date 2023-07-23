@@ -8,6 +8,7 @@ var allPostsApi = "https://spring-assignment-production.up.railway.app/api/v1/po
 
 var allContactApi = "https://spring-assignment-production.up.railway.app/api/v1/contacts/";
 var RegisterContactApi = "https://spring-assignment-production.up.railway.app/api/v1/contacts/";
+var deleteContactApi = "https://spring-assignment-production.up.railway.app/api/v1/contacts/"
 // getJSON(post,loginAPI, "id=xxx&p1=yyy", callbcak funxtion);
 // function getJJsp(method ,path, params, callback) {
 // 	var ts = new Date().getTime();	
