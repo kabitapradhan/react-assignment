@@ -103,11 +103,26 @@
     height: 100px;margin: 0 auto;}
 .why-choose-us-4bxcontainer .why-choose-us-eachbx .box-text{color: black;;}
 .why-choose-us-4bxcontainer .why-choose-us-eachbx h5{text-transform: capitalize;margin-bottom: 0.5rem;
-    font-weight: 500;color: #35598e;font-size: 1.25rem;margin-top: 15px;
+    font-weight: 500;color: #9da6b5;font-size: 1.25rem;margin-top: 15px;
     line-height: 1.2;}
 .why-choose-us-4bxcontainer .why-choose-us-eachbx .box-text p{margin: 0;text-align: justify;}
 .class-gallery-image{width: 566px;}
-#username-error-span,#password-error-span,#login-whole-error{display: none;color: red;font-size: 11px;}
+#username-error-span,#password-error-span,#login-whole-error,#cname-error-span,
+#cphone-error-span ,#cemail-error-span , #cmessage-error-span{
+    display: none;color: red;font-size: 11px;
+}
+.contact-succuss-modal{   
+    background: #ffa813;
+    font-size: 11px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;display: none;
+    transform: translate(-50%, -50%);
+    color: black;}
 /* end why-choose-us-4bxcontainer */
 /* media query */
 @media only screen and (max-width: 768px) {

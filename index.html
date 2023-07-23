@@ -24,6 +24,13 @@
   <link href="./css/index.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+    .custom_nav-container .navbar-toggler span {background-color: black;}
+    .custom_nav-container .navbar-toggler span::before, 
+    .custom_nav-container .navbar-toggler span::after {
+      background-color: black;
+    }
+  </style>
 </head>
 
 <body>
@@ -74,11 +81,11 @@
               style="padding-top: 1em;">
               <div class="col-6 col-sm-4 col-md-4">
                 <img class="contact-image" src="./image/whatsapp.png" ><span class="hd">Whatsapp</span>
-                <p class="number">+91 - 9999999999</p>
+                <p class="number">+91 87630 44465</p>
               </div>
               <div class="col-6 col-sm-4 col-md-4">
                 <img class="contact-image" src="./image/telephone-icon.png" ><span class="hd">Call us on</span>
-                <p class="number">+91 - 9999999999 / 080 - 888888888</p>
+                <p class="number">+91 87630 44465</p>
               </div>
             </div>
             
@@ -94,31 +101,31 @@
             <li class="nav-item">
               <a class="nav-link aboutus_header" href="contact.html">About Us</a>
             </li>
-            <li class="nav-item dropdown classrooms_header_dropdown">
-              <a class="nav-link " href="shop.html">Classrooms</a>
-              <div class="dropdown-content classrooms_dropdown_content">
-                <a href="#">Classroom 1</a>
-                <a href="#">Classroom 2</a>
-                <a href="#">Classroom 3</a>
-                <a href="#">Classroom 3</a>
-              </div>
-            </li>
-            <li class="nav-item faculties_header_dropdown dropdown">
-              <a class="nav-link " href="why.html">Faculties</a>
-              <div class="dropdown-content faculties_dropdown_content">
-                <a href="#">Faculty 1</a>
-                <a href="#">Faculty 2</a>
-                <a href="#">Faculty 3</a>
-                <a href="#">Faculty 3</a>
-              </div>
-            </li>
             <li class="nav-item courses_header_dropdown dropdown">
               <a class="nav-link " href="testimonial.html">Courses</a>
               <div class="dropdown-content courses_dropdown_content">
-                <a href="#">Course 1</a>
-                <a href="#">Course 2</a>
-                <a href="#">Course 3</a>
-                <a href="#">Course 3</a>
+                <a href="#">BANKING</a>
+                <a href="#">SSC</a>
+                <a href="#">RAILWAY</a>
+                <a href="#">OAS</a>
+              </div>
+            </li>
+            <!-- <li class="nav-item dropdown classrooms_header_dropdown">
+              <a class="nav-link " href="shop.html">Classrooms</a>
+              <div class="dropdown-content classrooms_dropdown_content">
+                <a href="#">BANKING</a>
+                <a href="#">SSC</a>
+                <a href="#">RAILWAY</a>
+                <a href="#">OAS</a>
+              </div>
+            </li> -->
+            <li class="nav-item faculties_header_dropdown dropdown">
+              <a class="nav-link " href="why.html">Faculties</a>
+              <div class="dropdown-content faculties_dropdown_content">
+                <a href="#">Disha Dash</a>
+                <a href="#">Puja Sahu</a>
+                <a href="#">Abhinav Panda</a>
+                <a href="#">Kabita Pradhan</a>
               </div>
             </li>
             
@@ -134,7 +141,7 @@
           </ul>
           </div>
           <div class="user_option">
-            <a onclick="clickToLogin()">
+            <a onclick="clickToLogin()" style="cursor: pointer;">
               <i class="fa fa-user" aria-hidden="true"></i>
               <span>Login</span>
             </a>
@@ -159,7 +166,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Login User</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button onclick="closeLoginModal()" type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -202,16 +209,14 @@
                         Welcome To <br>
                         Disha Classes
                       </h1>
-                      <p class="">
-                        Disha was started in the year 2020 with the support and encouragement by retired and serving
+                      <p style="height: 300px;">
+                        Disha was started in the year 2005 with the support and encouragement by retired and serving
 
                         IAS, IPS, IRS and KAS Officers. ICC is passionate about ts success from the very first year of establishment and 
                         
                         continues to be a successful institute in the field of Civil Services Exams and other Competitive Exams. ICC 
                         
-                        consists of a team of faculties who are specialist in their respective subjects and faculties are drawn from 
-                        
-                        Bangalore, Delhi, Hyderabad and other places.
+                        consists of a team of faculties who are specialist in their respective subjects.
                       </p>
                       <a href="">
                         Contact Us
@@ -233,9 +238,9 @@
                   <div class="col-md-7">
                     <div class="detail-box">
                       <h1>
-                        Why Choose Us
+                        Why Choose <br> Us
                       </h1>
-                      <p>
+                      <p style="height: 300px;">
                         We provide extensive training programs for students.
                          Every program is designed in such a way that nurtures students from the scrap and 
                          prepare them systematically to pursue their dreams. Career Launcher Bhubaneswar - 
@@ -261,15 +266,14 @@
                   <div class="col-md-7">
                     <div class="detail-box">
                       <h1>
-                        Best IAS Coaching <br>  in Bhubaneswar
+                        Best In <br> Bhubaneswar
                       </h1>
-                      <p>
-                        National IAS Academy is the one of the best IAS Coaching in Bangalore that promises 
+                      <p style="height: 300px;">
+                        National IAS Academy is the one of the best IAS Coaching in Bhubaneswar that promises 
                         best outcomes for all aspiring candidates enrolled with them.
                         The National IAS Academy is a coaching institute with a difference; 
                         fortified with highly experienced and expert tutors in the arena of Civil 
-                        Services examination and a continuous assessment module. National IAS Academy is 
-                        considered as a very reputed IAS academy in Bangalore.
+                        Services examination and a continuous assessment module.
                       </p>
                       <a href="">
                         Contact Us
@@ -315,16 +319,17 @@
             <div class="hd">
               <h2>Get A Free <span style="color: #FFBC09">Inquiry</span></h2>
             </div>
-            <p>If you still have doubts or even concerns, do not worry. We have made it easy to 
+            <p>If you still have doubts or even concerns, do not worry. 
+              We have made it easy to 
               get in touch with us.
             </p>
             <form method="post" class="pt-md-2 " onsubmit="false" name="enquiryForm">
-              <div class="row">
+              <div class="row" style="position: relative;">
                 <div class="form-group col-sm-6 col-xs-12">
                   <input required="" placeholder="Enter Name *" class="form-control" name="name" type="text">
                 </div>
                 <div class="form-group col-sm-6 col-xs-12">
-                  <input name="phone" type="text" class="form-control" placeholder="Enter Phone No *" required="">
+                  <input name="phone" max="10" type="text" class="form-control" placeholder="Enter Phone No *" required="">
                 </div>
                 <div class="form-group col-sm-12">
                   <input required="" placeholder="Enter Email *" class="form-control" name="email" type="email">
@@ -333,10 +338,13 @@
                   <textarea required="" placeholder="Message *" class="form-control" name="message" rows="4"></textarea>
                 </div>
                 <div class="col-md-12">
-                  <button type="submit" title="Submit Your Message!" class="btn btn-default" 
-                    name="submit" style="background-color: #3176d2;color: white;">
+                  <button type="button" title="Submit Your Message!" class="btn btn-default" 
+                    name="submit" onclick="submitEnquiryForm()" style="background-color: #3176d2;color: white;">
                     Submit Now
                   </button>
+                </div>
+                <div class="contact-succuss-modal" id="contact-succuss-modal">Success Enquiry. 
+                  We will connect you shortly
                 </div>
               </div>
             </form>
@@ -437,25 +445,25 @@
               <ul class="contact_info contact_info_light list_none">
                 <li>
                   <i class='fas fa-map-marker' style='font-size:24px'></i>
-                    <address>No. 37, 1st floor, CBI Main Road, Next to SBI Bank , Banivihar, 
-                      Bhubaneswar-24.</address>
+                    <address>Plot No. M/5-28 Acharya Vihar, Near Axis Bank ATM, Bhubaneswar, 
+                      Odisha 751013</address>
                 </li>
                 <li>
                     <i class="fa fa-phone"></i>
-                    <p>080 - 9880088777 </p>
+                    <p>+91 87630 44465</p>
                 </li>
-                 <li>
+                 <!-- <li>
                   <i class="fa fa-mobile-phone" style="font-size:24px"></i>
                     <p>+91 9880088777 / 8951293943</p>
-                </li>
+                </li> -->
                  <li> 
                     <i class="fa fa-envelope"></i>
                     <a href="mailto:innovativeias@gmail.com">innovativeias@gmail.com</a>
                 </li>
-                <li>
+                <!-- <li>
                     <i class="fa fa-globe"></i>
                     <a href="#">www.innovativeias.org</a>
-                </li>
+                </li> -->
             </ul>
             <h6 style="font-size: 25px;margin-top: 30px;">Follow Us</h6>
             <div >
@@ -481,10 +489,12 @@
           <div class="col-lg-8 col-sm-6 mb-4 mb-lg-0" style="color: white;">
             <h6 style="font-size: 25px;">Reach Us</h6>
             <div class="google-map-container">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14967.682020331433!2d85.83035473307591!3d20.30355732333931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909f30d449105%3A0xceeabf2060b3b884!2sVani%20Vihar%2C%20Bhubaneswar%2C%20Odisha!5e0!3m2!1sen!2sin!4v1689916156129!5m2!1sen!2sin" 
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.0893849803533!2d85.8325189!3d20.296567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909e9264cefbb%3A0xba01e84f3de3b3dd!2sDISHA%20INSTITUTE%20-%20Banking%2C%20SSC%2C%20Railway%20%26%20Civil%20Service!5e0!3m2!1sen!2sin!4v1690096885489!5m2!1sen!2sin" 
+              width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14967.682020331433!2d85.83035473307591!3d20.30355732333931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1909f30d449105%3A0xceeabf2060b3b884!2sVani%20Vihar%2C%20Bhubaneswar%2C%20Odisha!5e0!3m2!1sen!2sin!4v1689916156129!5m2!1sen!2sin" 
                 width="100%" height="450" style="border-radius: 4p;" allowfullscreen="" loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
+              </iframe> -->
             </div>
             
             </div>
